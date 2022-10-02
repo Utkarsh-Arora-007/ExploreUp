@@ -6,55 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.exploreup.R
+import com.example.exploreup.databinding.FragmentApollo15FragmentBinding
+import com.example.exploreup.databinding.FragmentApollo16FragmentBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [apollo_16_fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class apollo_16_fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var binding: FragmentApollo16FragmentBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_apollo_16_fragment, container, false)
+
+        binding = FragmentApollo16FragmentBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment apollo_16_fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            apollo_16_fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.mtxt4.text ="\tThe Apollo 16 PSE was the most sensitive seismological instrument emplaced on the Moon during the Apollo program. The instrument continued the observations made by the earlier missions and served to expand the lunar seismic network. The only problems encountered in the instrument were with the sensor thermal control system and excessive noise from the SPZ seismometer. This noise occurred at intervals that appear to have correlated with the temperature fluctuation cycle\n" +
+                "\t The core is probably composed mostly of iron and sulfur and extends from the center of the Moon out to a radius of no more than 450 kilometers, i.e., the core radius is less than 25% of the Moon's radius, which is quite small. In comparison, the Earth's core radius is 54% of the Earth's radius. However, the size of the lunar core is not well constrained by existing seismic observations. Better constraints come from the laser ranging retroreflector and magnetometer experiments.\n" +
+                "\the activation of the Apollo 16 passive seismom eter resulted in a four-station seismic network on the near side of the Moon. Because of a fortuitous impedance match between the Apollo 16 seismom eter, the local regolith, and the underlying lunar crust, the seismic station at Descartes is an order of magnitude more sensitive than stations on the maria and five times more sensitive than the station at the Fra Mauro site .\n" +
+                "\tApollo 16 active seismic ex periment was to determine the local structure of the regolith and of the shallow lunar crust. The near surface, compressional-wave velocity at the Descartes site was 114 m/sec. The lunar crust in the highlands is approxi mately 60 km thick. (2) The lunar crust in the highlands consists primarily of gabbroic and anorthositic material. The maria were formed by the excavation of the initial crust by meteoroid impacts and subsequent flooding by basaltic material. From seismic evidence, the basalt layer in the southeastern portion of Oceanus Procellarum may be 25 km thick, which is comparable to the thickness inferred for mascon maria.\n"
     }
+
+
 }

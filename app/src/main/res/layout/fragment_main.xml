@@ -22,16 +22,16 @@
                 android:background="@color/black"
 
                 >
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:alpha="0.7"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/moonback"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    android:src="@drawable/img"
-                    android:scaleType="centerCrop"
-                    android:alpha="0.7"
-                    />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:layout_width="match_parent"

@@ -6,55 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.exploreup.R
+import com.example.exploreup.databinding.FragmentApollo14FragmentBinding
+import com.example.exploreup.databinding.FragmentApollo15FragmentBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [apollo_15_fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class apollo_15_fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var binding: FragmentApollo15FragmentBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_apollo_15_fragment, container, false)
+        binding = FragmentApollo15FragmentBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment apollo_15_fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            apollo_15_fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.mtxt3.text = "\tFour wheels on the Moon. Astronauts David Scott and James Irwin roamed the Hadley-Apennine region of the Moon in a Lunar Roving Vehicle, also known as a \"Moon Buggy.\" They traveled more than 17 miles on the lunar surface and collected 170 pounds (77 kilograms) of lunar rock and soil.\n" +
+                "\tApollo 15 was launched on July 26, 1971, and successfully completed the fourth human landing on the Moon. It was the first of the “J series” of Apollo missions, which featured longer stays on the surface and in lunar orbit and more extensive science operations than was possible on the earlier Apollo missions.\n" +
+                "\tMeteoroid impacts cause heavy fracturing in the upper 20 kilometers of the lunar crust. These fractures in turn cause scattering of seismic waves in these regions. Below 20 kilometers, seismic-wave scattering decreases as a result of either closure of these fractures due to increasing pressure or of a change in chemical composition of the crust. In the mantle, seismic waves are attenuated much less on the Moon than they are on Earth\n" +
+                "\tMore than 1700 meteoroid impacts were recorded by the seismometer network, with impactor masses estimated to be between 0.5 and 5000 kilograms. Most moonquakes occur at depths of 800-1000 kilometers. These occur at monthly intervals at about 100 distinct sites, indicating that these moonquakes are caused by stresses from changes in lunar tides as the Moon orbits the Earth.\n"
     }
+
 }

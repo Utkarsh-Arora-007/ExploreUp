@@ -6,55 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.exploreup.R
+import com.example.exploreup.databinding.FragmentApollo11FragmentBinding
+import com.example.exploreup.databinding.FragmentApollo12FragmentBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [apollo_12_fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class apollo_12_fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    lateinit var binding: FragmentApollo12FragmentBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_apollo_12_fragment, container, false)
+        binding = FragmentApollo12FragmentBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment apollo_12_fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            apollo_12_fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.mtxt1.text = "\tThe primary objective of the experiment was to use these data to determine the internal structure, physical state, and tectonic activity of the Moon. The secondary objectives were to determine the number and mass of meteoroids that strike the Moon and record tidal deformations of the lunar surface.\n" +
+                "\tSeismic signals from 208 natural events and from two man-made impacts have been recorded during the first 8 months of operation of the Apollo 12 seismic station. The natural seismic events are of internal origin (moonquakes) and external origin (meteoroid impacts).\n" +
+                "\tWith few exceptions, moonquakes occur at monthly intervals near times of perigee. Thus, they appear to be induced by tidal stress. From the uniform polarity of the signals, the presence of tectonic strain within the outer shell of the moon is inferred.\n" +
+                "\tThe moonquakes can be separated into ten sets of matching signals, implying the presence of at least ten active zones in the region of the Apollo 12 station. All of the moonquakes are small (less than magnitude 2 on the Richter scale).\n" +
+                "\tThe low level of detectable seismic activity, the presence of mascons, and the lack of visual evidence of relative lateral movement of lunar surface blocks, suggests that the outer shell of the moon is quite rigid and tectonically stable compared to the earth.\n"
     }
+
 }
