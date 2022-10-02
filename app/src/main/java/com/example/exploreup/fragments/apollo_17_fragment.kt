@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.exploreup.R
 import com.example.exploreup.databinding.FragmentApollo15FragmentBinding
 import com.example.exploreup.databinding.FragmentApollo16FragmentBinding
@@ -31,6 +32,10 @@ class apollo_17_fragment : Fragment() {
                 "\tA total of 49,635 detections were made. Of these, 2249 (4.5%) are termed “impulsive”, 13,355 (26.9%) are “intermediate”, and 34,031 (68.5%) are “emergent.” These terms describe the seismic event risetime, where impulsive events reach their maximum energy quickly, emergent events take a longer time, and intermediate events are somewhere in between\n" +
                 "\tDeep moonquakes were not evident in Apollo 17 LSPE data, but numerous other events were found. Many of the LSPE events looked like the short period only events that are mentioned in PSELPEC. While the short period only events are not well documented in PSELPEC, they are known to exist and be a mix of meteorite impacts and thermal events.\n" +
                 "\tThe experiments showed that the seismic velocity (P wave) is between 0.1 and 0.3 kilometers per second in the upper few hundred meters of the crust at all three landing sites. These velocities are much lower than observed for intact rock on Earth, but are consistent with a highly fractured or brecciated material produced by the prolonged meteoritic bombardment of the Moon. At the Apollo 17 landing site, the surface basalt layer was determined to have a thickness of 1.4 kilometers, slightly higher than the 1 kilometer thickness determined from the Traverse Gravimeter Experiment.\n"
+
+    binding.apollo17.setOnClickListener {
+        findNavController().navigate(R.id.action_apollo_17_fragment_to_apollo17WebView)
+    }
     }
 
 

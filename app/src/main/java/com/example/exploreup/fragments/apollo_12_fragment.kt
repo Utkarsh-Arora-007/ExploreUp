@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.exploreup.R
 import com.example.exploreup.databinding.FragmentApollo11FragmentBinding
 import com.example.exploreup.databinding.FragmentApollo12FragmentBinding
@@ -29,6 +30,11 @@ class apollo_12_fragment : Fragment() {
                 "\tWith few exceptions, moonquakes occur at monthly intervals near times of perigee. Thus, they appear to be induced by tidal stress. From the uniform polarity of the signals, the presence of tectonic strain within the outer shell of the moon is inferred.\n" +
                 "\tThe moonquakes can be separated into ten sets of matching signals, implying the presence of at least ten active zones in the region of the Apollo 12 station. All of the moonquakes are small (less than magnitude 2 on the Richter scale).\n" +
                 "\tThe low level of detectable seismic activity, the presence of mascons, and the lack of visual evidence of relative lateral movement of lunar surface blocks, suggests that the outer shell of the moon is quite rigid and tectonically stable compared to the earth.\n"
+
+
+        binding.apollo12.setOnClickListener {
+            findNavController().navigate(R.id.action_apollo_12_fragment_to_apollo12WebView)
+        }
     }
 
 }

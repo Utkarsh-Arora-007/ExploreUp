@@ -33,9 +33,7 @@ class MainFragment : Fragment() {
         binding.expeditionsBtn.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_apollo_missions_fragment)
         }
-        binding.unityBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_siesmic_data_fragment)
-        }
+
 
     }
 

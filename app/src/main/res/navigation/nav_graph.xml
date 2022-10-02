@@ -50,30 +50,83 @@
         android:id="@+id/apollo_11_fragment"
         android:name="com.example.exploreup.fragments.apollo_11_fragment"
         android:label="fragment_apollo_11_fragment"
-        tools:layout="@layout/fragment_apollo_11_fragment" />
+        tools:layout="@layout/fragment_apollo_11_fragment" >
+        <action
+            android:id="@+id/action_apollo_11_fragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/apollo_12_fragment"
         android:name="com.example.exploreup.fragments.apollo_12_fragment"
         android:label="fragment_apollo_12_fragment"
-        tools:layout="@layout/fragment_apollo_12_fragment" />
+        tools:layout="@layout/fragment_apollo_12_fragment" >
+        <action
+            android:id="@+id/action_apollo_12_fragment_to_apollo12WebView"
+            app:destination="@id/apollo12WebView" />
+    </fragment>
     <fragment
         android:id="@+id/apollo_14_fragment"
         android:name="com.example.exploreup.fragments.apollo_14_fragment"
         android:label="fragment_apollo_14_fragment"
-        tools:layout="@layout/fragment_apollo_14_fragment" />
+        tools:layout="@layout/fragment_apollo_14_fragment" >
+        <action
+            android:id="@+id/action_apollo_14_fragment_to_apollo14WebVIew"
+            app:destination="@id/apollo14WebVIew" />
+    </fragment>
     <fragment
         android:id="@+id/apollo_15_fragment"
         android:name="com.example.exploreup.fragments.apollo_15_fragment"
         android:label="fragment_apollo_15_fragment"
-        tools:layout="@layout/fragment_apollo_15_fragment" />
+        tools:layout="@layout/fragment_apollo_15_fragment" >
+        <action
+            android:id="@+id/action_apollo_15_fragment_to_apollo15WebView"
+            app:destination="@id/apollo15WebView" />
+    </fragment>
     <fragment
         android:id="@+id/apollo_16_fragment"
         android:name="com.example.exploreup.fragments.apollo_16_fragment"
         android:label="fragment_apollo_16_fragment"
-        tools:layout="@layout/fragment_apollo_16_fragment" />
+        tools:layout="@layout/fragment_apollo_16_fragment" >
+        <action
+            android:id="@+id/action_apollo_16_fragment_to_apollo16WebView"
+            app:destination="@id/apollo16WebView" />
+    </fragment>
     <fragment
         android:id="@+id/apollo_17_fragment"
         android:name="com.example.exploreup.fragments.apollo_17_fragment"
         android:label="fragment_apollo_17_fragment"
-        tools:layout="@layout/fragment_apollo_17_fragment" />
+        tools:layout="@layout/fragment_apollo_17_fragment" >
+        <action
+            android:id="@+id/action_apollo_17_fragment_to_apollo17WebView"
+            app:destination="@id/apollo17WebView" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.example.exploreup.fragments.WebViewFragmentApollo11"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/apollo12WebView"
+        android:name="com.example.exploreup.fragments.apollo12WebView"
+        android:label="apollo12WebView" />
+    <fragment
+        android:id="@+id/apollo17WebView"
+        android:name="com.example.exploreup.fragments.apollo17WebView"
+        android:label="fragment_apollo17_web_view"
+        tools:layout="@layout/fragment_apollo17_web_view" />
+    <fragment
+        android:id="@+id/apollo14WebVIew"
+        android:name="com.example.exploreup.fragments.apollo14WebVIew"
+        android:label="fragment_apollo14_web_v_iew"
+        tools:layout="@layout/fragment_apollo14_web_v_iew" />
+    <fragment
+        android:id="@+id/apollo15WebView"
+        android:name="com.example.exploreup.fragments.Apollo15WebView"
+        android:label="fragment_apollo15_web_view"
+        tools:layout="@layout/fragment_apollo15_web_view" />
+    <fragment
+        android:id="@+id/apollo16WebView"
+        android:name="com.example.exploreup.fragments.apollo16WebView"
+        android:label="fragment_apollo16_web_view"
+        tools:layout="@layout/fragment_apollo16_web_view" />
 </navigation>

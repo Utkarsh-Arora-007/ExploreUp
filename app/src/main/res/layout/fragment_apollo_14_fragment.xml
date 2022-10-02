@@ -40,6 +40,19 @@
                 android:id="@+id/txt"
                 />
 
+            <TextView
+                android:id="@+id/apollo14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="For More Information CLick Here."
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="200dp"

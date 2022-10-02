@@ -19,12 +19,12 @@
             >
 
             <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/mgalaxy"
-                android:scaleType="centerCrop"
                 android:alpha="0.7"
-                />
+                android:scaleType="centerCrop"
+                android:src="@drawable/mgalaxy" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,6 +38,19 @@
                 android:layout_margin="25dp"
                 android:id="@+id/txt"
                 />
+
+            <TextView
+                android:id="@+id/apollo11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="For More Information CLick Here."
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:layout_width="0dp"
