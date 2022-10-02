@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.exploreup.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_siesmic_data_fragment"
+            app:destination="@id/siesmic_data_fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_apollo_missions_fragment"
+            app:destination="@id/apollo_missions_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/siesmic_data_fragment"
+        android:name="com.example.exploreup.fragments.Siesmic_data_fragment"
+        android:label="fragment_siesmic_data_fragment"
+        tools:layout="@layout/fragment_siesmic_data_fragment" />
+    <fragment
+        android:id="@+id/apollo_missions_fragment"
+        android:name="com.example.exploreup.fragments.apollo_missions_fragment"
+        android:label="fragment_apollo_missions_fragment"
+        tools:layout="@layout/fragment_apollo_missions_fragment" >
+        <action
+            android:id="@+id/action_apollo_missions_fragment_to_apollo_11_fragment"
+            app:destination="@id/apollo_11_fragment" />
+        <action
+            android:id="@+id/action_apollo_missions_fragment_to_apollo_12_fragment"
+            app:destination="@id/apollo_12_fragment" />
+        <action
+            android:id="@+id/action_apollo_missions_fragment_to_apollo_14_fragment"
+            app:destination="@id/apollo_14_fragment" />
+        <action
+            android:id="@+id/action_apollo_missions_fragment_to_apollo_15_fragment"
+            app:destination="@id/apollo_15_fragment" />
+        <action
+            android:id="@+id/action_apollo_missions_fragment_to_apollo_16_fragment"
+            app:destination="@id/apollo_16_fragment" />
+        <action
+            android:id="@+id/action_apollo_missions_fragment_to_apollo_17_fragment"
+            app:destination="@id/apollo_17_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apollo_11_fragment"
+        android:name="com.example.exploreup.fragments.apollo_11_fragment"
+        android:label="fragment_apollo_11_fragment"
+        tools:layout="@layout/fragment_apollo_11_fragment" />
+    <fragment
+        android:id="@+id/apollo_12_fragment"
+        android:name="com.example.exploreup.fragments.apollo_12_fragment"
+        android:label="fragment_apollo_12_fragment"
+        tools:layout="@layout/fragment_apollo_12_fragment" />
+    <fragment
+        android:id="@+id/apollo_14_fragment"
+        android:name="com.example.exploreup.fragments.apollo_14_fragment"
+        android:label="fragment_apollo_14_fragment"
+        tools:layout="@layout/fragment_apollo_14_fragment" />
+    <fragment
+        android:id="@+id/apollo_15_fragment"
+        android:name="com.example.exploreup.fragments.apollo_15_fragment"
+        android:label="fragment_apollo_15_fragment"
+        tools:layout="@layout/fragment_apollo_15_fragment" />
+    <fragment
+        android:id="@+id/apollo_16_fragment"
+        android:name="com.example.exploreup.fragments.apollo_16_fragment"
+        android:label="fragment_apollo_16_fragment"
+        tools:layout="@layout/fragment_apollo_16_fragment" />
+    <fragment
+        android:id="@+id/apollo_17_fragment"
+        android:name="com.example.exploreup.fragments.apollo_17_fragment"
+        android:label="fragment_apollo_17_fragment"
+        tools:layout="@layout/fragment_apollo_17_fragment" />
+</navigation>
